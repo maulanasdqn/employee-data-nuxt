@@ -10,7 +10,7 @@ definePageMeta({
       <Navbar class="px-16" title="Pendapatan" />
     </template>
     <template #body>
-      <Table />
+      <Table button-text="Pendapatan" />
     </template>
   </NuxtLayout>
 </template>

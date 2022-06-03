@@ -1,22 +1,18 @@
 <script setup lang="ts">
+import { useEmployeeStore } from "../../store/employee/";
+
+const store = useEmployeeStore();
+
 definePageMeta({
   layout: "dashboard",
 });
 
-const employeeData: any = [
-  {
-    id: 100001,
-    fullname: "Maulana Sodiqin",
-    role: "Junior Software Engineer",
-    present: true,
-  },
-  {
-    id: 100002,
-    fullname: "Fenny Oktaviani",
-    role: "Software Engineer",
-    present: false,
-  },
-];
+const employeeData: any = ref([]);
+
+onMounted(async () => {
+  await store.fetchEmployee();
+  employeeData.value = store.employeeList;
+});
 
 const tableHeader = [
   {
@@ -37,7 +33,7 @@ const tableHeader = [
   },
   {
     title: "",
-    value: "",
+    value: "aksi",
   },
 ];
 </script>
@@ -48,7 +44,26 @@ const tableHeader = [
       <Navbar class="px-16" title="Karyawan" />
     </template>
     <template #body>
-      <Table :items="employeeData" :headers="tableHeader" />
+      <Table
+        button-text="Karyawan"
+        :items="employeeData"
+        :headers="tableHeader"
+      >
+        <template #present="{ item }">
+          <span
+            :class="{ 'text-red-400': !item.present }"
+            class="text-green-400"
+          >
+            {{ item.present ? "Hadir" : "Tidak Hadir" }}</span
+          > </template
+        >]
+        <template #aksi>
+          <div class="flex gap-x-4 justify-end">
+            <span class="text-md font-medium text-yellow-400">Edit</span>
+            <span class="text-md font-medium text-red-400">Delete</span>
+          </div>
+        </template>
+      </Table>
     </template>
   </NuxtLayout>
 </template>
