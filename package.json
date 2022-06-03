@@ -12,7 +12,12 @@
     "nuxt-windicss": "^2.4.1"
   },
   "dependencies": {
+    "@pinia/nuxt": "^0.1.9",
+    "@prisma/client": "3.14.0",
+    "axios": "^0.27.2",
     "chart.js": "^3.8.0",
+    "pinia": "^2.0.14",
+    "prisma": "^3.14.0",
     "vue-chartjs": "^4.1.1"
   }
 }

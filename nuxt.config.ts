@@ -5,7 +5,7 @@ export default defineNuxtConfig({
   typescript: {
     shim: false,
   },
-  buildModules: ["nuxt-windicss"],
+  buildModules: ["nuxt-windicss", "@pinia/nuxt"],
   components: {
     global: true,
     dirs: ["~/components", "~/components/Common"],
