@@ -16,3 +16,9 @@ model employee {
   role String?
   present Boolean?
 }
+
+model branch {
+  id Int @id @default(autoincrement())
+  area String?
+  coordinator String?
+}

@@ -44,11 +44,7 @@ const tableHeader = [
       <Navbar class="px-16" title="Karyawan" />
     </template>
     <template #body>
-      <Table
-        button-text="Karyawan"
-        :items="employeeData"
-        :headers="tableHeader"
-      >
+      <Table :items="employeeData" :headers="tableHeader">
         <template #present="{ item }">
           <span
             :class="{ 'text-red-400': !item.present }"
