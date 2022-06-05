@@ -2,11 +2,11 @@
   "private": true,
   "license": "unlicense",
   "scripts": {
-    "build": "npx nuxt build",
-    "dev": "npx nuxt dev",
+    "build": "node_modules/nuxt/bin/nuxt.js build -c ./nuxt.config.ts",
+    "dev": "node_modules/nuxt/bin/nuxt.js dev -c ./nuxt.config.ts",
     "generate": "npx nuxt generate",
     "preview": "npx nuxt preview",
-    "start": "npx nuxt start"
+    "start": "node_modules/nuxt/bin/nuxt.js start -c ./nuxt.config.ts"
   },
   "devDependencies": {
     "nuxt": "3.0.0-rc.3",
@@ -16,9 +16,7 @@
     "@pinia/nuxt": "^0.1.9",
     "@prisma/client": "3.14.0",
     "axios": "^0.27.2",
-    "chart.js": "^3.8.0",
     "pinia": "^2.0.14",
-    "prisma": "^3.14.0",
-    "vue-chartjs": "^4.1.1"
+    "prisma": "^3.14.0"
   }
 }
