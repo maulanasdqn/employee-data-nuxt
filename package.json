@@ -2,7 +2,7 @@
   "private": true,
   "license": "unlicense",
   "scripts": {
-    "build": "/app/node_modules/nuxt/bin/nuxt.js build -c ./nuxt.config.ts",
+    "build": "npx nuxt build",
     "dev": "npx nuxt dev",
     "generate": "npx nuxt generate",
     "preview": "npx nuxt preview",
