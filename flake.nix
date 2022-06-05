@@ -10,6 +10,7 @@
       devShell = pkgs.mkShell {
         nativeBuildInputs = [ pkgs.bashInteractive ];
         buildInputs = with pkgs; [
+          pkgs.heroku
           pkgs.nodejs-16_x
           nodePackages.prisma
         ];
