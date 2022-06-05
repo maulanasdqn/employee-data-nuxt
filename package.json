@@ -3,10 +3,10 @@
   "license": "unlicense",
   "scripts": {
     "build": "/app/node_modules/nuxt/bin/nuxt.js build -c ./nuxt.config.ts",
-    "dev": "/app/node_modules/nuxt/bin/nuxt.js dev -c ./nuxt.config.ts",
+    "dev": "npx nuxt dev",
     "generate": "npx nuxt generate",
     "preview": "npx nuxt preview",
-    "start": "/app/node_modules/nuxt/bin/nuxt.js start -c ./nuxt.config.ts"
+    "start": "nuxt start"
   },
   "devDependencies": {
     "nuxt": "3.0.0-rc.3",
