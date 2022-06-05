@@ -2,11 +2,11 @@
   "private": true,
   "license": "unlicense",
   "scripts": {
-    "build": "nuxt build",
-    "dev": "nuxt dev",
-    "generate": "nuxt generate",
-    "preview": "nuxt preview",
-    "start": "nuxt start"
+    "build": "nuxi build",
+    "dev": "nuxi dev",
+    "generate": "nuxi generate",
+    "preview": "nuxi preview",
+    "start": "nuxi start"
   },
   "devDependencies": {
     "nuxt": "3.0.0-rc.3",
